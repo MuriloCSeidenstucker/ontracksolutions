@@ -1,0 +1,152 @@
+@media (max-width: 991.98px) {
+  header .navbar-brand img {
+    max-width: 180px;
+  }
+
+  header #navbarNav ul{
+    display: none;
+  }
+
+  /* header .navbar-collapse {
+    width: 100%;
+  } */
+#slider img{
+  margin-top: 0;
+}
+  #contato .email img {
+    width: 90px;
+    top: -40px;
+  }
+
+
+}
+
+@media (min-width: 991.98px) {
+  header .nav-link {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+}
+
+@media (max-width: 810px) {
+  #header{
+    margin: 0;
+    padding: 0;
+  }
+
+  header .navbar {
+    background: #fff;
+  }
+
+  header .container-full {
+    margin-left: 15px;
+  }
+
+  header button {
+    margin-right: 15px;
+  }
+
+  header .navbar .login img{
+    display: none;
+  }
+
+  header .navbar .login a .text-login {
+    display: flex;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  header #navbarNav ul{
+    display: none;
+  }
+
+  .block {
+    margin-bottom: 50px;
+  }
+
+  #slider .row {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #slider h1,
+  #slider h4
+   {
+    text-shadow: 0 0 2px #000;
+  }
+
+  #slider img {
+    margin-top: 0;
+    max-width: 302px;
+    margin-bottom: 233px;
+  }
+
+
+  #sobre {
+    margin-bottom: 100px;
+  }
+
+  #servicos{
+    margin-top: 55px;
+  }
+
+
+  #servicos a.destaque .img-container {
+    height: 120px;
+  }
+
+  #servicos a.destaque .img-container img {
+    max-height: 100px;
+  }
+
+  #sobre .list-app {
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #contato .container .form {
+    margin-top: 40px;
+  }
+
+  #contato .container .left-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  #contato .email {
+    padding: 60px 30px 50px 30px;
+  }
+
+  #contato .logo img {
+    justify-content: center;
+  }
+
+  #contato .email form {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #contato ul {
+    padding-top: 30px;
+    justify-content: center;
+  }
+
+  #feature .feature-wrap h2,
+  .single-services h2 {
+    font-size: 18px;
+  }
+
+
+  #feature .feature-wrap h3,
+  .single-services h3 {
+    font-size: 14px;
+  }
+}

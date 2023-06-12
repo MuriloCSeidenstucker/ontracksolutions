@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="indexController" lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="assets/favicon.ico">
+  <title ng-bind="titulo">{{titulo}}</title>
+  <meta name="description"
+  content="A {{titulo}} trabalha com soluções em telemetria e rastreamento
+  para veículos particulares, pessoas e frotas (veículos terrestres,
+  náuticos e aéreos)">
+  <meta property="og:image" content="https://i.ibb.co/WpdR95m/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <link rel="stylesheet" href="css/owl/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;700&family=Quicksand:wght@300;600;700&family=Varela+Round&display=swap" rel="stylesheet"> 
+</head>
+
+<body class="container">
+  <div ng-view></div>
+  <!--Header-->
+
+  <header id="header" class="container ">
+    <nav class="navbar navbar-expand-lg no-full no-background ">
+      <div class="container">
+        <a class="navbar-brand" href="#slider">
+          <img src="assets/logo.png" alt="logo" class="img-fluid" />
+        </a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navbarNav" class="navbar-collapse justify-content-end collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Empresa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#feature">Serviços</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+          <div class="login">
+            <img src="assets/login.png" class="img-login" alt="icone login"/>
+            <a href={{login}} target="_blank">
+              <div class="text-login">
+                <span>Área do</span>
+                <span>Cliente</span>
+              </div>
+            </a>
+          </div>
+        </ul>
+      </div>
+
+      </div>
+    </nav>
+  </header>
+
+
+  <main >
+    <div class="fixed-bottom position-fixed" style="bottom: 1rem; right: 1rem; z-index: 50;">
+      <div class="d-flex justify-content-end">
+      <a href={{whatsapp}}
+        target="_blank" rel="noopener">
+        <img src="./assets/icons/Zap.svg" alt="Botão do WhatsApp" alt="icone whatsapp"/>
+      </a>
+    </div>
+    </div>
+      <!--//Slider-->
+    <div id="slider" class="no-full block">
+      <div class="container">
+        <div class="row">
+          <div class="banner col-lg-6 mb-md-0 mb-4">
+            <h1>SUA SEGURANÇA NA PONTA
+              DOS DEDOS</h1>
+            <h4 class="mb-4 subtitle">A <span class="font-weight-bold">{{titulo}} </span>trabalha com soluções em telemetria e rastreamento
+              para veículos particulares, pessoas e frotas (veículos terrestres,
+              náuticos e aéreos).</h4>
+          </div>
+          <div class="smart col-lg-6 col-md-6 col-sm-12 mb-md-0 mb-4">
+            <img src="./assets/banner02.png" alt="imagem de banner">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--//Slider-->
+  
+    <!--Sobre-->
+    <div id="sobre" class="block">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center align-self-center order-md-1 order-2">
+            <img src="assets/auto-sobre-empresa.png" class="img-fluid" alt="imagem de computadores e celulares">
+          </div>
+          <div class="col-md-6 align-self-center mb-md-0 mb-4 order-md-2 order-1">
+            <h1 class="title text-center mb-5">{{titulo}}</h1>
+            <div class="subtitle mb-5 custom-line-height">
+              <p> A {{titulo}} atua em {{estado}} e região, oferecendo uma forma inovadora de controle e
+                gestão de sua frota.</p>
+              <p>O rastreamento por segurança torna-se apenas um detalhe, comparado com a quantidade de informações que
+                disponibilizaremos para você gerir o seu negócio.</p>
+            </div>
+            <ul class="list-sobre">
+              <li class="sobre-item"><i
+                  class="bi bi-geo-alt-fill d-flex justify-content-center align-items-center mb-2"></i>
+                <p>Mapas com localização "real time".
+              </li>
+              <li class="sobre-item"><i
+                  class="bi bi-chat-quote d-flex justify-content-center align-items-center mb-2"></i>
+                <p>Diversos alertas, também gerados em tempo real.</p>
+              </li>
+              <li class="sobre-item">
+                <i class="bi bi-person-bounding-box d-flex justify-content-center align-items-center mb-2"></i>
+                <p>Controle não só do veículo, mas também do
+                  motorista.</p>
+              </li>
+              <li class="sobre-item"><i
+                  class="bi bi-graph-up-arrow d-flex justify-content-center align-items-center mb-2"></i>
+                <p>Relatórios completos de eventos, jornadas...</p>
+              </li>
+              <li class="sobre-item"><i class="bi bi-gear-wide d-flex justify-content-center align-items-center mb-2"></i>
+                <p>Gestão de manutenção, combustível e outros.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="app default-bg space">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 col-md-offset-2">
+                <div class="col-md-12">
+                  <h4 class="text-center mb-3">Baixe nosso aplicativo</h4>
+                </div>
+                <div class="list-app d-flex">
+                  <div class="col-md-6">
+                    <a href={{appAndroid}} target="_blank">
+                      <img class="img-responsive" src="assets/android.png" alt="icone android"/>
+                    </a>
+                  </div>
+                  <div class="col-md-6">
+                    <a href={{appIOS}} target="_blank">
+                      <img class="img-responsive" src="assets/ios.png" alt="icone ios" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--//Sobre-->
+  
+    <!--Serviços-->
+    <section id="feature" class="transparent-bg ">
+      <div class="container mb-5">
+        <div class="text-center wow fadeInDown mb-5 pt-5">
+          <h1>Nossos Serviços</h1>
+        </div>
+  
+        <div class="row">
+  
+          <div class="features col-lg-4 col-12">
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-pin-map"></i>
+                <p>Integração com Goole Maps
+                  e Google Street View</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-thermometer-half"></i>
+                <p>Sensor de temperatura
+                  (container, caminhão
+                  e câmara frigorífica)</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-map-fill"></i>
+                <p>Mapa com localização do
+                  veículo ou pessoa rastreada</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-person-bounding-box"></i>
+                <p>iButton: cartão-ponto digital identifica o motorista no veículo</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-exclamation-octagon"></i>
+                <p>Módulo de lembretes: IPVA,
+                  CNH,
+                  revisão e manutenção</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-123"></i>
+                <p>Contador de descarregamentos
+                  (caminhão basculante,
+                  plataforma, tele entulho, etc.)</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+          </div>
+          <!--/.services-->
+          <div class="features col-lg-4 col-12">
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-clipboard-data"></i>
+                <p>Gerenciamento
+                  de combustível</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-chat-left-text"></i>
+                <p>Otimização de logística com SMS</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-alarm"></i>
+                <p>Alerta dirigindo
+                  fora de horário</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-file-lock2-fill"></i>
+                <p>Eventos opcionais
+                  (velocidade, travas de baú,
+                  sensor de abertura de porta)</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-bar-chart-line"></i>
+                <p>Sensor de pressão hidráulica</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-robot"></i>
+                <p>Filtro de velocidade
+                  (monitoramento e histórico)</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+          </div>
+          <div class="features col-lg-4 col-12">
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-stopwatch"></i>
+                <p>Controle de jornada
+                  de trabalho</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-bounding-box-circles"></i>
+                <p>Cerca virtual</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-shield-lock"></i>
+                <p>Bloqueio do veículo</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-filetype-pdf"></i>
+                <p>Registro de trajeto
+                  percorrido</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-sign-turn-slight-right-fill"></i>
+                <p>Otimização de rota</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+  
+            <div class="list wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+              <div class="feature-wrap">
+                <i class="bi bi-geo-alt-fill"></i>
+                <p>Ponto de referência</p>
+              </div>
+            </div>
+            <!--/.col-md-4-->
+          </div>
+        </div>
+    </section>
+    <!--/.row-->
+    <!--//Serviços-->
+  
+    <!--Contato-->
+    <div id="contato" class="block">
+      <div class="container">
+        <h1 class="text-center mb-4">Entre em Contato</h1>
+        <h5 class="subtitle text-center mb-5">Estamos a disposição para melhor lhe atender.
+          Faça contato, solicite orçamento.</h5>
+        <div class="row">
+          <div class="col-md-6 left-info">
+            <div class="info-itens">
+              <div class="item mb-5">
+                <div class="icon mb-2">
+                  <a href={{googleMaps}} target="_blank">
+                    <i class="bi bi-geo-alt-fill"></i>
+                  </a>
+                  <h5 class="ms-2 mb-2">Localização</h5>
+                </div>
+                <div class="info align-items-center">
+                  <p class="text-center mb-0">
+                    {{localizacao}} </p>
+                  <p class="text-center">{{estado}}</p>
+                </div>
+              </div>
+              <div class="item mb-5">
+                <div class="icon">
+                  <a href={{whatsapp}} target="_blank">
+                    <i class="bi bi-whatsapp"></i>
+                  </a>
+                  <h5 class="ms-2">WhatsApp</h5>
+                </div>
+                <div class="info">
+                  <p class="text-center">
+                    {{telefone}} </p>
+                </div>
+              </div>
+              <div class="item">
+                <div class="icon">
+                  <a href={{contatoEmail}} target="_blank">
+                    <i class="bi bi-envelope-check"></i>
+                  </a>
+  
+                  <h5 class="ms-2">Email</h5>
+                </div>
+                <div class="info">
+                  <p class="text-center">{{email}}</p>
+                </div>
+              </div>
+              <div class="redes-sociais">
+                <a href={{instagram}} target="_blank"><i class="bi bi-instagram"></i></a>
+                <a href={{facebook}} target="_blank"><i class="bi bi-facebook"></i></a>
+              </div>
+            </div>
+          </div>
+          <!--Formulário-->
+          <div class="col-md-6 form">
+            <form id="form" action="envio.php" method="post" enctype="multipart/form-data">
+              <div class="mb-4">
+                <input type="text" class="form-control name" name="name"
+                data-constraints="@Required @JustLetters" id="name" placeholder="Nome" required>
+             
+              </div>
+              <div class="mb-4">
+                <input type="email" class="form-control email" id="email" name="email"
+                data-constraints="@Required @Email" placeholder="Email" required>
+                
+              </div>
+              <div class="mb-4">
+                <select class="form-select assunto" name="assunto" id="assunto" aria-label="Default select example" required data-constraints="@Required">
+                  <option selected>Selecione o Assunto</option>
+                  <option value="1-Proposta">Proposta</option>
+                  <option value="2-Sugestão">Sugestão</option>
+                  <option value="3-Reclamação">Reclamação</option>
+                  <option value="4-Outros">Outros</option>
+                </select>
+          
+              </div>
+              <div class="mb-4">
+                <textarea class="form-control form-message message" id="message" rows="3" name="message"
+                  placeholder="Mensagem" required data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                 
+              </div>
+              <div class="btn-enviar col-lg-4">
+                <a href="#">
+                  <button type="submit" class="btn btn-primary button d-md-inline d-block w-100">Enviar</button>
+                </a>
+              </div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--//Formulário-->
+  </main>
+
+  <!--Footer-->
+  <footer id="footer" class="d-flex justify-content-center align-items-center mb-2">
+    <p class="copy">Copyright {{titulo}} &copy; 2022
+    <p>
+  </footer>
+  <!--//Footer-->
+
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="/lib/angular.min.js"></script>
+  <script src="/lib/angular-route.min.js"></script>
+  <script src="/js/app/controller.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

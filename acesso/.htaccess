@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^acesso\.ontracksolutions\.com\.br$
+RewriteRule ^/?$ "https\:\/\/ontracksolutions\.com\.br\/acesso" [R=301,L]
+Options +Indexes
+IndexOptions +HTMLTable +FancyIndexing

@@ -1,0 +1,69 @@
+<html> 
+  <head>
+    <meta charset="utf-8">
+    <meta https-equiv="X-UA-Compatible" content="IE=edge">
+    <title ng-bind="homectrl.headTitle">Autorastro</title>
+    <link rel="shortcut icon" href="/css/favicon.ico" type="image/x-icon" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="custon.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="app.js"></script> 
+    <script src="service.js"></script>  
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+<!------ Include the above in your HEAD tag ---------->
+<body>
+  <div class="wrapper fadeInDown" ng-app="loginApp" ng-controller="HomeCtrl as homectrl">
+    <div class="formContent">
+        <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-12"><br> 
+                <div class="panel" >
+                  <div align="center">
+                    <img id="logo-img" class="logo-img" src="https://lh3.googleusercontent.com/z14sB7OReJT6WvCb9yJ7lrupY1Lk2rX_DN6XU3O3P82mFKUSubJncOiYm9MrYCU0pOgWo4OVij9tk9RVM3cl8HOI?1539119646192" alt="Selsyn Tecnologia" style="max-height: 80px;">
+                  </div>
+                </div>
+                <div class="panel">
+                  <div id="resposta"></div><!-- /.box-header -->
+                </div> 
+                <div class="well">
+                  <form name="FormLogin" ng-submit="homectrl.login(FormLogin)">            
+                    <div class="form-group">
+                      <label for="usrname" class="label"><span class="fa fa-user"></span> Usuário </label>
+                      <input class="form-control"  name="email" type="email" ng-model="homectrl.email" placeholder="Informe o email usuário" required >
+                    </div>
+                    <div class="form-group">
+                      <label for="psw" class="label"><span class="fa fa-eye"></span> Senha </label>
+                      <input type="password" class="form-control" name="senha" ng-model="homectrl.senha"  placeholder="Informe a senha" required>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block" ng-class="{'disabled' : FormLogin.$invalid }"><span class="fa fa-power-off"></span> Login</button>
+                  </form>
+                </div>
+                <p class="pull-right" ng-show="FormLogin.email.$valid" >Esqueceu a senha? <span style="cursor: pointer;" ng-click="homectrl.forgotPassword()">Clique aqui</span></p>
+              </div>
+            </div> <!-- Row -->
+          </div> <!-- container-fluid -->
+
+    </div>
+  </div>
+</body>
+
+<div id="errorModal" class="modal fade"  tabindex="-1" role="dialog" aria-hidden="true" style="padding-top:15%; overflow-y:visible; background: transparent;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 style="margin:0;">Ocorreu um problema!</h3>
+      </div>
+      <div class="modal-body">
+          <div id="mensagemError"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+</html>

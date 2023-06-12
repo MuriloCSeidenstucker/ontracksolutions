@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^acesso\.autorastronet\.com\.br$
+RewriteRule ^/?$ "https\:\/\/autorastronet\.com\.br\/acesso" [R=301,L]
+Options +Indexes
+IndexOptions +HTMLTable +FancyIndexing
